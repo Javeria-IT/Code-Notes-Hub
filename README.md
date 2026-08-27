@@ -169,13 +169,13 @@ https://codenotehub.netlify.app/
 Add screenshots of your project here:
 
 ```markdown
-![Home Page](images/home.png)
+![Home Page](Screenshots/home.png.png)
 
-![Login Page](images/login.png)
+![Login Page](Screenshots/login.png.png)
 
-![Dashboard](images/dashboard.png)
+![Dashboard](Screenshots/dashboard.png.png)
 
-![Contact Page](images/contact.png)
+![Contact Page](Screenshots/contact.png.png)
 ```
 
 ---
