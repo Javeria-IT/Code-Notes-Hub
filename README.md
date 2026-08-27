@@ -169,11 +169,11 @@ https://codenotehub.netlify.app/
 Add screenshots of your project here:
 
 ```markdown
-![Home Page](Code Notes HUB/images/home.png)
-Code Notes HUB/images
-![Login Page](Code Notes HUB/images/login.png)
+![Home Page](Code Notes HUB/images/Home.png)
 
-![Dashboard](Code Notes HUB/images/dashboard.png)
+![Login Page](Code Notes HUB/images/Login.png)
+
+![Dashboard](Code Notes HUB/images/Dashboard.png)
 
 ![Contact Page](Code Notes HUB/images/contact.png)
 ```
