@@ -128,7 +128,7 @@ The layout automatically adapts to different screen resolutions.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/codenotes-hub.git
+git clone https://github.com/Javeria-IT/codenotes-hub.git
 ```
 
 ### 2. Open the Project
@@ -169,7 +169,7 @@ https://codenotehub.netlify.app/
 Add screenshots of your project here:
 
 ```markdown
-![Home Page](images/home.png)
+![Home Page](CodeNoteHub/images/home.png)
 
 ![Login Page](images/login.png)
 
