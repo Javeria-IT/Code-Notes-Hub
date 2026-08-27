@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>React Notes | CodeNotes Hub</title>
+
+<link rel="stylesheet" href="css/notes.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-tech="react">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<h2>React Notes</h2>
+
+<ul>
+
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#jsx">JSX</a></li>
+<li><a href="#props">Props</a></li>
+<li><a href="#state">State</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#hooks">Hooks</a></li>
+<li><a href="#usestate">useState</a></li>
+<li><a href="#useeffect">useEffect</a></li>
+<li><a href="#forms">Forms</a></li>
+<li><a href="#conditional">Conditional Rendering</a></li>
+<li><a href="#api">API Integration</a></li>
+
+</ul>
+
+<ul class="sidebar-extra">
+
+    <li><a href="quiz.html#react"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+    <li><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> My Notepad</a></li>
+
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="content">
+
+<button id="backBtn">
+    <i class="fa-solid fa-arrow-left"></i> Dashboard
+</button>
+
+<header>
+
+<h1>React Complete Notes</h1>
+
+<input type="text" id="searchTopic" placeholder="Search Topic...">
+
+<button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+</header>
+
+<section id="intro">
+<h2>Introduction</h2>
+<p>React is a JavaScript library for building user interfaces out of small, reusable pieces called components. Instead of manually updating the page, you describe what the UI should look like for a given state, and React updates the DOM efficiently for you.</p>
+<pre><code>function App() {
+  return &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+}</code></pre>
+</section>
+
+<section id="components">
+<h2>Components</h2>
+<p>Components are the building blocks of a React app - independent, reusable pieces of UI, usually written as JavaScript functions that return markup.</p>
+<pre><code>function Welcome() {
+  return &lt;h2&gt;Welcome back!&lt;/h2&gt;;
+}
+
+export default Welcome;</code></pre>
+</section>
+
+<section id="jsx">
+<h2>JSX</h2>
+<p>JSX lets you write HTML-like syntax directly inside JavaScript. It gets compiled into regular JavaScript function calls. Every JSX expression must return a single root element (or a fragment).</p>
+<pre><code>const element = (
+  &lt;div&gt;
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;p&gt;Some text&lt;/p&gt;
+  &lt;/div&gt;
+);</code></pre>
+</section>
+
+<section id="props">
+<h2>Props</h2>
+<p>Props ("properties") pass data from a parent component down to a child component. They are read-only - a child should never modify its own props.</p>
+<pre><code>function Greeting(props) {
+  return &lt;h2&gt;Hello, {props.name}!&lt;/h2&gt;;
+}
+
+&lt;Greeting name="Sara" /&gt;</code></pre>
+</section>
+
+<section id="state">
+<h2>State</h2>
+<p>State is data that belongs to a component and can change over time. When state changes, React automatically re-renders the component to reflect the new value.</p>
+<pre><code>const [count, setCount] = useState(0);
+
+setCount(count + 1); // triggers a re-render</code></pre>
+</section>
+
+<section id="events">
+<h2>Events</h2>
+<p>React events are named using camelCase (like <code>onClick</code>) and are passed a function directly, rather than a string, unlike plain HTML.</p>
+<pre><code>function Button() {
+  function handleClick() {
+    alert("Clicked!");
+  }
+
+  return &lt;button onClick={handleClick}&gt;Click Me&lt;/button&gt;;
+}</code></pre>
+</section>
+
+<section id="hooks">
+<h2>Hooks</h2>
+<p>Hooks are functions that let function components use React features like state and lifecycle behavior. All hooks start with "use" - useState and useEffect are the two you'll reach for most often.</p>
+<pre><code>import { useState, useEffect } from "react";</code></pre>
+</section>
+
+<section id="usestate">
+<h2>useState</h2>
+<p>useState adds a piece of local state to a component. It returns the current value and a setter function, and calling the setter re-renders the component with the new value.</p>
+<pre><code>const [name, setName] = useState("Guest");
+
+&lt;button onClick={() =&gt; setName("Ali")}&gt;
+  Set Name
+&lt;/button&gt;</code></pre>
+</section>
+
+<section id="useeffect">
+<h2>useEffect</h2>
+<p>useEffect runs "side effects" after a component renders - things like fetching data, subscribing to something, or updating the document title. The dependency array controls when it re-runs.</p>
+<pre><code>useEffect(() => {
+  document.title = `Count: ${count}`;
+}, [count]);</code></pre>
+</section>
+
+<section id="forms">
+<h2>Forms</h2>
+<p>In React, form inputs are usually "controlled" - their value is driven by state, and every keystroke updates that state through an onChange handler.</p>
+<pre><code>const [email, setEmail] = useState("");
+
+&lt;input
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/&gt;</code></pre>
+</section>
+
+<section id="conditional">
+<h2>Conditional Rendering</h2>
+<p>You can show different UI based on a condition using a ternary operator, the && operator, or a plain if statement before the return.</p>
+<pre><code>{isLoggedIn ? (
+  &lt;p&gt;Welcome back!&lt;/p&gt;
+) : (
+  &lt;p&gt;Please log in.&lt;/p&gt;
+)}</code></pre>
+</section>
+
+<section id="api">
+<h2>API Integration</h2>
+<p>Combining useEffect and useState is the standard way to fetch data from an API when a component loads, and store the result in state so it can be rendered.</p>
+<pre><code>const [users, setUsers] = useState([]);
+
+useEffect(() => {
+  fetch("https://api.example.com/users")
+    .then(res => res.json())
+    .then(data => setUsers(data));
+}, []);</code></pre>
+</section>
+
+</div>
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notes.js"></script>
+
+</body>
+
+</html>

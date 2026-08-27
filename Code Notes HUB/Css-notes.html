@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CSS Notes | CodeNotes Hub</title>
+
+<link rel="stylesheet" href="css/notes.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-tech="css">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<h2>CSS Notes</h2>
+
+<ul>
+
+<li><a href="#intro">Introduction</a></li>
+
+<li><a href="#selectors">Selectors</a></li>
+
+<li><a href="#colors">Colors</a></li>
+
+<li><a href="#fonts">Fonts</a></li>
+
+<li><a href="#boxmodel">Box Model</a></li>
+
+<li><a href="#flexbox">Flexbox</a></li>
+
+<li><a href="#grid">CSS Grid</a></li>
+
+<li><a href="#positioning">Positioning</a></li>
+
+<li><a href="#responsive">Responsive Design</a></li>
+
+<li><a href="#media">Media Queries</a></li>
+
+<li><a href="#handwritten">Hand Written Notes</a></li>
+
+</ul>
+
+<ul class="sidebar-extra">
+
+    <li><a href="quiz.html#css"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+    <li><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> My Notepad</a></li>
+
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="content">
+
+<button id="backBtn">
+    <i class="fa-solid fa-arrow-left"></i> Dashboard
+</button>
+
+<header>
+
+<h1>CSS Complete Notes</h1>
+
+<input
+type="text"
+id="searchTopic"
+placeholder="Search Topic...">
+
+<button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+</header>
+
+<!-- =================== -->
+
+<section id="intro">
+
+<h2>Introduction to CSS</h2>
+
+<p>
+CSS stands for Cascading Style Sheets. It describes how HTML elements should be displayed on screen, paper, or in other media.
+CSS saves a lot of work because it can control the layout of many web pages all at once, and it separates presentation from structure.
+</p>
+
+<pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="selectors">
+
+<h2>Selectors</h2>
+
+<p>
+Selectors are patterns used to select the element(s) you want to style. The most common are the element selector, class selector, and ID selector.
+</p>
+
+<pre><code>p { color: red; }
+
+.card { padding: 20px; }
+
+#logo { font-weight: bold; }</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="colors">
+
+<h2>Colors</h2>
+
+<p>
+CSS colors can be defined using names, HEX, RGB, RGBA, HSL, or HSLA values. RGBA and HSLA also let you control opacity.
+</p>
+
+<pre><code>h1 { color: tomato; }
+
+p { color: #3B82F6; }
+
+div { background: rgba(139, 92, 246, 0.5); }</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="fonts">
+
+<h2>Fonts</h2>
+
+<p>
+The font-family property sets the typeface, while font-size, font-weight, and font-style control size, boldness, and slant. Always provide fallback fonts.
+</p>
+
+<pre><code>body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="boxmodel">
+
+<h2>Box Model</h2>
+
+<p>
+Every HTML element is a rectangular box made up of content, padding, border, and margin. Understanding the box model is essential for layout and spacing.
+</p>
+
+<pre><code>.box {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #333;
+  margin: 10px;
+  box-sizing: border-box;
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="flexbox">
+
+<h2>Flexbox</h2>
+
+<p>
+Flexbox is a one-dimensional layout system for arranging items in a row or column, with powerful alignment and spacing controls.
+</p>
+
+<pre><code>.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="grid">
+
+<h2>CSS Grid</h2>
+
+<p>
+CSS Grid is a two-dimensional layout system that lets you arrange items into rows and columns at the same time.
+</p>
+
+<pre><code>.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="positioning">
+
+<h2>Positioning</h2>
+
+<p>
+The position property controls how an element is placed in the document: static (default), relative, absolute, fixed, or sticky.
+</p>
+
+<pre><code>.modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="responsive">
+
+<h2>Responsive Design</h2>
+
+<p>
+Responsive design makes a website look great on every screen size, typically using fluid grids, flexible images, and media queries.
+</p>
+
+<pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="media">
+
+<h2>Media Queries</h2>
+
+<p>
+Media queries apply CSS rules only when certain conditions are met, such as a maximum screen width, allowing layouts to adapt.
+</p>
+
+<pre><code>@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}</code></pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="handwritten">
+
+<h2>Hand Written Notes</h2>
+
+<p>Prefer reading from a PDF? Open, download, or print the handwritten CSS notes below.</p>
+
+<!-- Buttons -->
+
+<div class="pdf-buttons">
+
+   
+
+    <!-- PDF 2 -->
+    <button onclick="window.open('./assets/css-tags.pdf', '_blank')">
+        <i class="fa-solid fa-book-open"></i>
+        CSS Tags
+    </button>
+
+  
+
+    <!-- Download -->
+    <button id="downloadPdf">
+        <i class="fa-solid fa-download"></i>
+        Download
+    </button>
+
+    <!-- Print -->
+    <button id="printPdf">
+        <i class="fa-solid fa-print"></i>
+        Print
+    </button>
+
+</div>
+
+
+<!-- PDF Viewer -->
+
+<div class="pdf-viewer">
+
+    <iframe
+        id="pdfFrame"
+        width="100%"
+        height="800"
+        style="display:none;">
+    </iframe>
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/css-notes.js"></script>
+
+</body>
+</html>

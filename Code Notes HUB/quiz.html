@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Practice Quiz | CodeNotes Hub</title>
+
+<link rel="stylesheet" href="css/quiz.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <h2>CodeNotes</h2>
+
+    <ul>
+
+        <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+        <li><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> My Notepad</a></li>
+
+        <li class="active"><a href="quiz.html"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+        <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+        <li id="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+
+    </ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="main">
+
+<header>
+
+    <div>
+        <h1>Practice Quiz</h1>
+        <p>Pick a technology and test what you've learned.</p>
+    </div>
+
+    <button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+</header>
+
+<!-- Technology Tabs -->
+
+<div class="quiz-tabs" id="quizTabs"></div>
+
+<!-- Quiz Body -->
+
+<div id="quizContainer" class="quiz-container"></div>
+
+<!-- Result -->
+
+<div id="quizResult" class="quiz-result" style="display:none;">
+
+    <h2 id="resultScore"></h2>
+
+    <p id="resultMessage"></p>
+
+    <button id="retryBtn">🔁 Try Again</button>
+
+</div>
+
+</div>
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/quiz.js"></script>
+
+</body>
+
+</html>

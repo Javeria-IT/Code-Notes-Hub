@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tailwind CSS Notes | CodeNotes Hub</title>
+
+<link rel="stylesheet" href="css/notes.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-tech="tailwind">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<h2>Tailwind Notes</h2>
+
+<ul>
+
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#setup">Installation / Setup</a></li>
+<li><a href="#utility">Utility Classes</a></li>
+<li><a href="#colors">Colors</a></li>
+<li><a href="#typography">Typography</a></li>
+<li><a href="#spacing">Spacing</a></li>
+<li><a href="#flexbox">Flexbox</a></li>
+<li><a href="#grid">Grid</a></li>
+<li><a href="#responsive">Responsive Design</a></li>
+<li><a href="#hoverfocus">Hover / Focus States</a></li>
+<li><a href="#components">Components</a></li>
+
+</ul>
+
+<ul class="sidebar-extra">
+
+    <li><a href="quiz.html#tailwind"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+    <li><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> My Notepad</a></li>
+
+    <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="content">
+
+<button id="backBtn">
+    <i class="fa-solid fa-arrow-left"></i> Dashboard
+</button>
+
+<header>
+
+<h1>Tailwind CSS Complete Notes</h1>
+
+<input type="text" id="searchTopic" placeholder="Search Topic...">
+
+<button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+</header>
+
+<section id="intro">
+<h2>Introduction</h2>
+<p>Tailwind CSS is a utility-first CSS framework. Instead of writing custom CSS classes, you style elements by combining small, single-purpose utility classes directly in your HTML.</p>
+<pre><code>&lt;h1 class="text-2xl font-bold text-blue-600"&gt;
+  Hello Tailwind
+&lt;/h1&gt;</code></pre>
+</section>
+
+<section id="setup">
+<h2>Installation / Setup</h2>
+<p>Tailwind can be installed via npm as part of a build process, or included quickly through the Play CDN for prototyping and learning.</p>
+<pre><code>npm install -D tailwindcss
+npx tailwindcss init
+
+&lt;!-- or, for quick prototyping --&gt;
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+</section>
+
+<section id="utility">
+<h2>Utility Classes</h2>
+<p>A utility class does one small job - like setting padding, a text color, or a border radius. You combine many utilities to build a fully styled element without leaving your HTML.</p>
+<pre><code>&lt;button class="px-4 py-2 bg-blue-500 text-white rounded-lg"&gt;
+  Click Me
+&lt;/button&gt;</code></pre>
+</section>
+
+<section id="colors">
+<h2>Colors</h2>
+<p>Tailwind ships with a large default color palette, each with shades from 50 (lightest) to 900 (darkest), applied through prefixes like text-, bg-, and border-.</p>
+<pre><code>&lt;div class="bg-purple-600 text-white"&gt;
+  Purple Box
+&lt;/div&gt;</code></pre>
+</section>
+
+<section id="typography">
+<h2>Typography</h2>
+<p>Text size, weight, alignment, and line height are all controlled with utilities like text-lg, font-semibold, text-center, and leading-relaxed.</p>
+<pre><code>&lt;p class="text-lg font-semibold text-center leading-relaxed"&gt;
+  Styled paragraph text
+&lt;/p&gt;</code></pre>
+</section>
+
+<section id="spacing">
+<h2>Spacing</h2>
+<p>Padding (p-) and margin (m-) utilities use a consistent numeric scale, and can target one side (pt-, mb-) or an axis (px-, my-).</p>
+<pre><code>&lt;div class="p-6 mt-4 mb-2 px-8"&gt;
+  Spaced box
+&lt;/div&gt;</code></pre>
+</section>
+
+<section id="flexbox">
+<h2>Flexbox</h2>
+<p>The flex class turns on flexbox, and utilities like justify-between, items-center, and gap-4 handle alignment and spacing between flex items.</p>
+<pre><code>&lt;div class="flex items-center justify-between gap-4"&gt;
+  &lt;span&gt;Left&lt;/span&gt;
+  &lt;span&gt;Right&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section id="grid">
+<h2>Grid</h2>
+<p>The grid class turns on CSS Grid, and grid-cols-* sets the number of columns, while gap-* controls spacing between grid items.</p>
+<pre><code>&lt;div class="grid grid-cols-3 gap-6"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>
+
+<section id="responsive">
+<h2>Responsive Design</h2>
+<p>Tailwind is mobile-first: unprefixed utilities apply to all sizes, and prefixes like sm:, md:, lg: apply a utility only at that breakpoint and up.</p>
+<pre><code>&lt;div class="text-sm md:text-lg lg:text-2xl"&gt;
+  Responsive text
+&lt;/div&gt;</code></pre>
+</section>
+
+<section id="hoverfocus">
+<h2>Hover / Focus States</h2>
+<p>State prefixes like hover: and focus: apply a utility only in that state, so you can style interactions without writing any custom CSS or JavaScript.</p>
+<pre><code>&lt;button class="bg-blue-500 hover:bg-blue-700 focus:ring-2"&gt;
+  Hover Me
+&lt;/button&gt;</code></pre>
+</section>
+
+<section id="components">
+<h2>Components</h2>
+<p>Because repeating long class lists can get messy, Tailwind projects often extract repeated patterns into reusable components (in React, Vue, etc.) or use the @apply directive inside a CSS file.</p>
+<pre><code>.btn-primary {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-lg;
+}</code></pre>
+</section>
+
+</div>
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notes.js"></script>
+
+</body>
+
+</html>

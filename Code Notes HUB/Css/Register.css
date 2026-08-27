@@ -1,0 +1,384 @@
+/* =========================================== CodeNotes Hub - Register Page =========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0F172A;
+
+    overflow:hidden;
+
+    color:#fff;
+
+}
+
+/* ========================= Background Circles ======================== */
+
+.circle{
+
+    position:absolute;
+    border-radius:50%;
+    filter:blur(40px);
+    opacity:.45;
+
+}
+
+.one{
+
+    width:320px;
+    height:320px;
+
+    background:#3B82F6;
+
+    top:-120px;
+    left:-120px;
+
+}
+
+.two{
+
+    width:350px;
+    height:350px;
+
+    background:#8B5CF6;
+
+    right:-120px;
+    bottom:-120px;
+
+}
+
+/* =========================  Container ========================= */
+
+.container{
+
+    width:1150px;
+    max-width:95%;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:rgba(30,41,59,.65);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+
+}
+
+/* =========================  Left Side ======================== */
+
+.left{
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.left h1{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.left p{
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.left img{
+
+    width:200px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/* =========================  Right Side ========================= */
+
+.right{
+
+    padding:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+form{
+
+    width:80%;
+
+}
+
+form h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:34px;
+
+}
+
+/* =========================  Input Box ========================= */
+
+.input-box{
+
+    position:relative;
+    border-radius: 0;
+    margin-bottom:22px;
+
+}
+
+.input-box i{
+
+    position:absolute;
+
+    left:18px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#94A3B8;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:16px 50px;
+
+    border-radius:50px;
+
+    background:#1E293B;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    border:2px solid #3B82F6;
+
+    box-shadow:0 0 15px rgba(59,130,246,.25);
+
+}
+
+/* Password Eye */
+
+#togglePassword,
+#toggleConfirmPassword{
+
+    position:absolute;
+
+    right:50px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#94A3B8;
+
+}
+
+/* =========================  Terms ========================= */
+
+.terms{
+
+    margin-bottom:22px;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+.terms input{
+
+    margin-right:8px;
+
+}
+
+/* ========================= Button ========================= */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(59,130,246,.35);
+
+}
+
+/* =========================  Login Link ========================= */
+
+.login-link{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#CBD5E1;
+
+}
+
+.login-link a{
+
+    color:#3B82F6;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* =========================  Animation ========================= */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========================= Responsive ========================= */
+
+@media(max-width:900px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.left{
+
+padding:40px 30px;
+
+}
+
+.left img{
+
+width:200px;
+
+}
+
+.right{
+
+padding:40px 30px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.left h1{
+
+font-size:30px;
+
+}
+
+form h2{
+
+font-size:28px;
+
+}
+
+.input-box input{
+
+padding:14px 45px;
+
+font-size:15px;
+
+}
+
+button{
+
+padding:14px;
+
+}
+
+}

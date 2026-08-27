@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile | CodeNotes Hub</title>
+
+<link rel="stylesheet" href="css/profile.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <h2>CodeNotes</h2>
+
+    <ul>
+
+        <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+        <li><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> My Notepad</a></li>
+
+        <li><a href="quiz.html"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+        <li class="active"><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+        <li id="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+
+    </ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="main">
+
+<header>
+
+    <div>
+        <h1>My Profile</h1>
+        <p>Your learning journey at a glance.</p>
+    </div>
+
+    <button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+</header>
+
+<div class="profile-grid">
+
+    <!-- Profile Card -->
+
+    <div class="profile-card">
+
+        <div class="avatar" id="avatar"></div>
+
+        <h2 id="profileName">Student</h2>
+        <p id="profileEmail">student@email.com</p>
+
+        <button id="editProfileBtn"><i class="fa-solid fa-pen"></i> Edit Profile</button>
+
+        <form id="editProfileForm" style="display:none;">
+
+            <input type="text" id="editFullname" placeholder="Full Name" required>
+
+            <input type="text" id="editUsername" placeholder="Username" required>
+
+            <button type="submit">Save Changes</button>
+
+        </form>
+
+    </div>
+
+    <!-- Stats -->
+
+    <div class="stats-card">
+
+        <h2>Learning Stats</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3 id="statOverall">0%</h3>
+                <p>Overall Progress</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fa-solid fa-book-open"></i>
+                <h3 id="statTopics">0</h3>
+                <p>Topics Completed</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fa-solid fa-bookmark"></i>
+                <h3 id="statBookmarksP">0</h3>
+                <p>Bookmarked Topics</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fa-solid fa-note-sticky"></i>
+                <h3 id="statNotesP">0</h3>
+                <p>Personal Notes</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fa-solid fa-brain"></i>
+                <h3 id="statQuizAvg">0%</h3>
+                <p>Avg Quiz Score</p>
+            </div>
+
+            <div class="stat-box">
+                <i class="fa-solid fa-trophy"></i>
+                <h3 id="statQuizCount">0</h3>
+                <p>Quizzes Taken</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Per-Tech Progress -->
+
+    <div class="tech-card">
+
+        <h2>Progress by Technology</h2>
+
+        <div id="profileTechList"></div>
+
+    </div>
+
+    <!-- Bookmarked Topics -->
+
+    <div class="tech-card">
+
+        <h2>Bookmarked Topics</h2>
+
+        <div id="profileBookmarkList"></div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

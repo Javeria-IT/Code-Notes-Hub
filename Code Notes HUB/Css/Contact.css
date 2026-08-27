@@ -1,0 +1,599 @@
+/* ==================================
+   CONTACT PAGE - CodeNotes Hub
+   ================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #0F172A;
+
+    color: white;
+
+    overflow-x: hidden;
+
+    position: relative;
+}
+
+
+/* ===========================
+   BACKGROUND GLOW CIRCLES
+   =========================== */
+
+body::before,
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    filter: blur(50px);
+
+    opacity: .45;
+
+    z-index: -1;
+
+}
+
+body::before {
+
+    background: #3B82F6;
+
+    top: -120px;
+    left: -100px;
+
+}
+
+body::after {
+
+    background: #8B5CF6;
+
+    bottom: -130px;
+    right: -100px;
+
+}
+
+
+/* ===========================
+   CONTACT SECTION
+   =========================== */
+
+.contact-section {
+
+    width: 100%;
+
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+}
+
+
+/* ===========================
+   HEADER
+   =========================== */
+
+.contact-section header {
+
+    width: 1100px;
+
+    max-width: 95%;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ===========================
+   BACK BUTTON
+   =========================== */
+
+#backBtn {
+
+    width: auto;
+
+    padding: 11px 22px;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 50px;
+
+    background: rgba(30,41,59,.75);
+
+    backdrop-filter: blur(12px);
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+
+    transition: .3s ease;
+
+}
+
+
+/* Arrow */
+
+#backBtn i {
+
+    margin-right: 8px;
+
+    color: #60A5FA;
+
+}
+
+
+/* Hover */
+
+#backBtn:hover {
+
+    transform: translateX(-4px);
+
+    color: white;
+
+    border-color: rgba(59,130,246,.5);
+
+    box-shadow: 0 10px 25px rgba(59,130,246,.25);
+
+}
+
+
+/* Active */
+
+#backBtn:active {
+
+    transform: scale(.96);
+
+}
+
+
+/* ===========================
+   MAIN CONTAINER
+   =========================== */
+
+.contact-container {
+
+    width: 1100px;
+
+    max-width: 95%;
+
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(30,41,59,.65);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.45);
+
+    position: relative;
+
+}
+
+
+/* ===========================
+   CONTACT CONTENT
+   =========================== */
+
+.contact-content {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    padding: 70px 60px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+/* ===========================
+   CONTACT TAG
+   =========================== */
+
+.contact-tag {
+
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    background: rgba(59,130,246,.12);
+
+    border: 1px solid rgba(59,130,246,.25);
+
+    color: #60A5FA;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ===========================
+   HEADING
+   =========================== */
+
+.contact-content h2 {
+
+    font-size: 42px;
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+
+    background: linear-gradient(
+        45deg,
+        #60A5FA,
+        #A78BFA
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+
+/* ===========================
+   DESCRIPTION
+   =========================== */
+
+.contact-content p {
+
+    max-width: 550px;
+
+    color: #CBD5E1;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ===========================
+   SOCIAL LINKS
+   =========================== */
+
+.social-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* ===========================
+   SOCIAL LINK
+   =========================== */
+
+.social-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    min-width: 190px;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        45deg,
+        #3B82F6,
+        #8B5CF6
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(59,130,246,.25);
+
+    transition: .3s ease;
+
+}
+
+
+/* Instagram Icon */
+
+.social-link i {
+
+    font-size: 19px;
+
+}
+
+
+/* Hover */
+
+.social-link:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(59,130,246,.4);
+
+}
+
+
+/* Active */
+
+.social-link:active {
+
+    transform: translateY(-1px) scale(.98);
+
+}
+
+
+/* ===========================
+   FOOTER
+   =========================== */
+
+footer {
+
+    width: 100%;
+
+    padding: 18px 20px;
+
+    text-align: center;
+
+    background: rgba(15,23,42,.7);
+
+    border-top: 1px solid rgba(255,255,255,.06);
+
+}
+
+
+footer p {
+
+    color: #64748B;
+
+    font-size: 13px;
+
+}
+
+
+/* ===========================
+   ANIMATION
+   =========================== */
+
+.contact-container {
+
+    animation: contactFade .7s ease forwards;
+
+}
+
+
+@keyframes contactFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 900px) {
+
+    .contact-section {
+
+        padding: 30px 15px;
+
+    }
+
+    .contact-section header {
+
+        max-width: 92%;
+
+    }
+
+    .contact-container {
+
+        max-width: 92%;
+
+        min-height: auto;
+
+    }
+
+    .contact-content {
+
+        padding: 60px 40px;
+
+    }
+
+}
+
+
+/* ===========================
+   TABLET
+   =========================== */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+
+        padding: 25px 12px;
+
+    }
+
+    .contact-section header {
+
+        max-width: 94%;
+
+        margin-bottom: 18px;
+
+    }
+
+    #backBtn {
+
+        padding: 9px 17px;
+
+        font-size: 13px;
+
+    }
+
+    .contact-container {
+
+        max-width: 94%;
+
+        border-radius: 20px;
+
+    }
+
+    .contact-content {
+
+        padding: 50px 25px;
+
+    }
+
+    .contact-content h2 {
+
+        font-size: 32px;
+
+    }
+
+    .contact-content p {
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+    .contact-tag {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+
+    }
+
+}
+
+
+/* ===========================
+   MOBILE
+   =========================== */
+
+@media (max-width: 400px) {
+
+    .contact-content {
+
+        padding: 40px 18px;
+
+    }
+
+    .contact-content h2 {
+
+        font-size: 28px;
+
+    }
+
+    .contact-content p {
+
+        font-size: 13px;
+
+    }
+
+    .social-link {
+
+        min-width: 170px;
+
+        padding: 12px 20px;
+
+        font-size: 14px;
+
+    }
+
+    footer p {
+
+        font-size: 11px;
+
+    }
+
+}

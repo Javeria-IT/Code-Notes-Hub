@@ -1,0 +1,673 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    display:flex;
+
+    background:#0F172A;
+
+    color:#F8FAFC;
+
+}
+
+/* ========================== SIDEBAR ========================= */
+
+.sidebar{
+
+    width:280px;
+
+    min-height:100vh;
+
+    background:#111827;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    padding:30px;
+
+    overflow:auto;
+
+}
+
+.sidebar h2{
+
+    margin-bottom:30px;
+
+    color:#3B82F6;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    margin-bottom:15px;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    color:#CBD5E1;
+
+    text-decoration:none;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#3B82F6;
+
+    color:white;
+
+}
+
+.sidebar-extra{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar-extra a i{
+
+    width:18px;
+
+    margin-right:6px;
+
+}
+
+/* ==========================  CONTENT ========================= */
+
+.content{
+
+    margin-left:300px;
+
+    padding:40px;
+
+    width:100%;
+
+}
+
+/* ==========================  HEADER ========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:50px;
+
+}
+
+header h1{
+
+    font-size:36px;
+
+}
+
+#searchTopic{
+
+    width:280px;
+
+    padding:14px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:40px;
+
+    background:#1E293B;
+
+    color:white;
+
+}
+
+/* ==========================  SECTION ========================= */
+
+section{
+
+    margin-bottom:60px;
+
+    background:#1E293B;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+section h2{
+
+    margin-bottom:20px;
+
+    color:#60A5FA;
+
+}
+
+section p{
+
+    line-height:1.8;
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+}
+
+/* ========================== CODE BLOCK ========================== */
+
+pre{
+
+    background:#020617;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    overflow:auto;
+
+    border-left:5px solid #3B82F6;
+
+}
+
+code{
+
+    color:#F8FAFC;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+/* ==========================  SCROLLBAR ========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0F172A;
+
+}
+
+/* ==========================  HOVER ========================== */
+
+section{
+
+    transition:.35s;
+
+}
+
+section:hover{
+
+    transform:translateY(-5px);
+
+}
+
+pre{
+
+    transition:.3s;
+
+}
+
+pre:hover{
+
+    border-left:5px solid #8B5CF6;
+
+}
+
+/* ========================== RESPONSIVE========================= */
+
+@media(max-width:900px){
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:auto;
+
+}
+
+.content{
+
+    margin-left:0;
+
+    padding:25px;
+
+}
+
+body{
+
+    display:block;
+
+}
+
+header{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+#searchTopic{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+header h1{
+
+    font-size:28px;
+
+}
+
+section{
+
+    padding:20px;
+
+}
+
+pre{
+
+    padding:15px;
+
+}
+
+code{
+
+    font-size:13px;
+
+}
+
+}
+/* Copy Button */
+
+.copy-btn{
+
+position:absolute;
+
+top:10px;
+
+right:10px;
+
+padding:8px 14px;
+
+border:none;
+
+background:#3B82F6;
+
+color:white;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+/* Code Block */
+
+pre{
+
+position:relative;
+
+}
+
+/* Progress */
+
+#progressBar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:5px;
+
+background:#3B82F6;
+
+width:0;
+
+z-index:9999;
+
+}
+
+/* Top Button */
+
+#topBtn{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:#3B82F6;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+}
+
+/* Bookmark */
+
+.bookmark-btn{
+
+margin-top:20px;
+
+padding:10px 20px;
+
+border:none;
+
+background:#8B5CF6;
+
+color:white;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+.sidebar a.active{
+
+background:#3B82F6;
+
+color:white;
+
+}
+/* ==========================  PDF BUTTONS ========================= */
+
+.pdf-buttons{
+
+display:flex;
+
+gap:15px;
+
+margin-bottom:30px;
+
+flex-wrap:wrap;
+
+}
+
+.pdf-buttons button{
+
+padding:14px 24px;
+
+border:none;
+
+border-radius:10px;
+
+background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+
+color:white;
+
+cursor:pointer;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.pdf-buttons button:hover{
+
+transform:translateY(-3px);
+
+}
+
+.pdf-viewer{
+
+background:#1E293B;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+iframe{
+
+border:none;
+
+border-radius:10px;
+
+background:white;
+
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid #555;
+    padding:10px;
+    text-align:left;
+    vertical-align:top;
+}
+
+td{
+    white-space:normal;
+    word-break:break-word;
+}
+#backBtn{
+    padding:10px 18px;
+    background:#3B82F6;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+#backBtn:hover{
+    background:#2563EB;
+}
+/* ========================== TOPIC TOOLBAR (bookmark + mark complete) ========================== */
+
+.topic-toolbar{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.topic-toolbar .bookmark-btn{
+    margin-top:0;
+}
+
+.complete-check{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    color:#94A3B8;
+    cursor:pointer;
+    user-select:none;
+}
+
+.complete-check input{
+    width:18px;
+    height:18px;
+    accent-color:#22C55E;
+    cursor:pointer;
+}
+
+/* ========================== TEXT HIGHLIGHTER ========================== */
+
+#highlightToolbar{
+    display:none;
+    position:absolute;
+    z-index:999;
+    background:#111827;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:30px;
+    padding:6px 8px;
+    gap:6px;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+}
+
+#highlightToolbar button{
+    width:24px;
+    height:24px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,.25);
+    cursor:pointer;
+}
+
+#highlightToolbar button[data-color="yellow"]{ background:#FDE047; }
+#highlightToolbar button[data-color="green"]{ background:#4ADE80; }
+#highlightToolbar button[data-color="blue"]{ background:#60A5FA; }
+#highlightToolbar button[data-color="pink"]{ background:#F472B6; }
+
+#highlightToolbar button[data-color="remove"]{
+    background:#1E293B;
+    color:#F87171;
+    font-weight:bold;
+    font-size:12px;
+    border-color:#F87171;
+}
+
+mark.cnh-highlight{
+    padding:1px 2px;
+    border-radius:3px;
+    color:#0F172A;
+}
+
+mark.cnh-yellow{ background:#FDE047; }
+mark.cnh-green{ background:#4ADE80; }
+mark.cnh-blue{ background:#60A5FA; }
+mark.cnh-pink{ background:#F472B6; }
+
+/* ========================== TOAST NOTIFICATION ========================== */
+
+#cnhToast{
+    position:fixed;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%) translateY(20px);
+    background:#111827;
+    color:#F8FAFC;
+    padding:12px 24px;
+    border-radius:30px;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+    z-index:9999;
+    font-size:14px;
+}
+
+#cnhToast.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+/* ========================== LIGHT MODE ========================== */
+
+.light-mode{
+    background:#F8FAFC;
+    color:#111827;
+}
+
+.light-mode .sidebar{
+    background:white;
+}
+
+.light-mode .content{
+    background:#F8FAFC;
+}
+
+.light-mode section{
+    background:white;
+    color:#111827;
+}
+
+.light-mode #searchTopic{
+    background:#e2e8f0;
+    color:#111827;
+}
+
+.light-mode #cnhToast{
+    background:#1E293B;
+}
+
+body,
+.sidebar,
+.content,
+section,
+button,
+input{
+    transition:.3s;
+}

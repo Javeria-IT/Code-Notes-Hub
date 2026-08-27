@@ -1,0 +1,691 @@
+/* ==========================================  CodeNotes Hub - Study Workspace ========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    display:flex;
+
+    background:#0F172A;
+
+    color:#F8FAFC;
+
+}
+
+/* ==========================  SIDEBAR ========================== */
+
+.sidebar{
+
+    width:260px;
+
+    min-height:100vh;
+
+    background:#111827;
+
+    padding:30px;
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+}
+
+.sidebar h2{
+
+    color:#3B82F6;
+
+    margin-bottom:30px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    margin:15px 0;
+
+}
+
+.sidebar a{
+
+    display:block;
+
+    padding:12px 15px;
+
+    text-decoration:none;
+
+    color:#E2E8F0;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.sidebar a:hover{
+
+    background:#3B82F6;
+
+    color:white;
+
+}
+
+/* ==========================
+      MAIN
+========================== */
+
+.main-content{
+
+    margin-left:280px;
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+/* ==========================  HEADER ========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+header h1{
+
+    font-size:34px;
+
+}
+
+#backBtn{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+#backBtn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================  CARDS ========================= */
+
+.workspace-card{
+
+    background:#1E293B;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
+
+.workspace-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.workspace-card h2{
+
+    color:#60A5FA;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================  BOOKMARK LIST ========================== */
+
+.bookmark-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#0F172A;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+}
+
+.bookmark-title{
+
+    font-weight:600;
+
+}
+
+/* ==========================  BUTTONS ========================== */
+
+.action-btn{
+
+    border:none;
+
+    padding:8px 15px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-left:10px;
+
+    color:white;
+
+}
+
+.open-btn{
+
+    background:#3B82F6;
+
+}
+
+.favorite-btn{
+
+    background:#EC4899;
+
+}
+
+.delete-btn{
+
+    background:#EF4444;
+
+}
+
+/* ==========================  NOTES ========================== */
+
+#personalNotes{
+
+    width:100%;
+
+    height:220px;
+
+    background:#0F172A;
+
+    color:white;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    resize:vertical;
+
+    outline:none;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+}
+
+#saveNotes{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#22C55E;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+/* ========================== HIGHLIGHT BOX ========================== */
+
+.highlight-box{
+
+    background:#FEF08A;
+
+    color:#111827;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================   FAVORITES========================== */
+
+.favorite-item{
+
+    background:#312E81;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:12px;
+
+}
+
+/* ==========================   RESPONSIVE ========================== */
+
+@media(max-width:900px){
+
+body{
+
+    display:block;
+
+}
+
+.sidebar{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:auto;
+
+}
+
+.main-content{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+}
+
+}
+/* ==========================  TODO LIST ========================= */
+
+.todo-input{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.todo-input input{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#0F172A;
+
+    color:white;
+
+}
+
+.todo-input button{
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#3B82F6;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+#todoList{
+
+    list-style:none;
+
+}
+
+.todo-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#0F172A;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:12px;
+
+}
+
+.todo-item span{
+
+    flex:1;
+
+    cursor:pointer;
+
+}
+
+.todo-item.completed span{
+
+    text-decoration:line-through;
+
+    color:#94A3B8;
+
+}
+
+.delete-task{
+
+    background:#EF4444;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+/* ========================== SIDEBAR ACTIVE + LOGOUT ========================== */
+
+.sidebar li.active a{
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+    color:white;
+}
+
+.sidebar li#logout{
+    cursor:pointer;
+    padding:12px 15px;
+    border-radius:10px;
+    color:#F87171;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+.sidebar li#logout:hover{
+    background:rgba(248,113,113,.15);
+}
+
+.sidebar li i{
+    width:20px;
+}
+
+/* ========================== HEADER DARK MODE BTN ========================== */
+
+#darkMode{
+    background:#1E293B;
+    border:none;
+    color:white;
+    font-size:20px;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+header p{
+    color:#94A3B8;
+    margin-top:5px;
+}
+
+/* ========================== NOTEPAD ========================== */
+
+.notepad-toolbar{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.notepad-toolbar input{
+    flex:1;
+    padding:12px 18px;
+    border:1px solid #334155;
+    background:#0F172A;
+    color:white;
+    border-radius:30px;
+    outline:none;
+}
+
+.notepad-toolbar button{
+    padding:12px 22px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.note-form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    background:#0F172A;
+    border:1px solid #334155;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.note-form input,
+.note-form textarea{
+    width:100%;
+    background:#111827;
+    color:white;
+    border:1px solid #334155;
+    border-radius:10px;
+    padding:12px 15px;
+    outline:none;
+    font-family:'Poppins',sans-serif;
+}
+
+.note-form textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.note-form-actions{
+    display:flex;
+    gap:12px;
+}
+
+.note-form-actions button[type="submit"]{
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+    color:white;
+    border:none;
+    padding:10px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.note-form-actions button[type="button"]{
+    background:transparent;
+    color:#94A3B8;
+    border:1px solid #334155;
+    padding:10px 22px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.notes-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:16px;
+}
+
+.note-card{
+    background:#0F172A;
+    border:1px solid #334155;
+    border-radius:14px;
+    padding:18px;
+}
+
+.note-card-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.note-card-header h3{
+    font-size:17px;
+    word-break:break-word;
+}
+
+.note-card-actions{
+    display:flex;
+    gap:8px;
+    flex-shrink:0;
+}
+
+.note-card-actions button{
+    background:rgba(255,255,255,.06);
+    border:none;
+    color:#94A3B8;
+    width:30px;
+    height:30px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.note-card-actions button:hover{
+    background:rgba(255,255,255,.12);
+    color:white;
+}
+
+.note-card p{
+    color:#CBD5E1;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:12px;
+    white-space:pre-wrap;
+    max-height:120px;
+    overflow:hidden;
+}
+
+.note-date{
+    font-size:12px;
+    color:#64748B;
+}
+
+.empty-msg{
+    color:#64748B;
+    font-style:italic;
+}
+
+/* ========================== LIGHT MODE ========================== */
+
+body.light-mode{
+    background:#F8FAFC;
+    color:#111827;
+}
+
+body.light-mode .sidebar{
+    background:white;
+}
+
+body.light-mode .workspace-card{
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+body.light-mode .bookmark-item,
+body.light-mode .note-form,
+body.light-mode .note-card,
+body.light-mode .notepad-toolbar input,
+body.light-mode .note-form input,
+body.light-mode .note-form textarea{
+    background:#F1F5F9;
+    color:#111827;
+    border-color:#E2E8F0;
+}
+
+body.light-mode #darkMode{
+    background:#E2E8F0;
+    color:#111827;
+}
+
+body.light-mode .note-card p{
+    color:#334155;
+}
+
+body.light-mode,
+body.light-mode .sidebar,
+body.light-mode .workspace-card,
+body.light-mode .note-card{
+    transition:.3s;
+}

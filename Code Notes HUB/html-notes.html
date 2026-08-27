@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Notes | CodeNotes Hub</title>
+
+    <link rel="stylesheet" href="css/notes.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body data-tech="html">
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <h2>HTML Notes</h2>
+
+    <ul>
+
+        <li><a href="#intro">Introduction</a></li>
+
+        <li><a href="#structure">HTML Structure</a></li>
+
+        <li><a href="#heading">Headings</a></li>
+
+        <li><a href="#paragraph">Paragraph</a></li>
+
+        <li><a href="#lists">Lists</a></li>
+
+        <li><a href="#links">Links</a></li>
+
+        <li><a href="#images">Images</a></li>
+
+        <li><a href="#tables">Tables</a></li>
+
+        <li><a href="#forms">Forms</a></li>
+
+        <li><a href="#semantic">Semantic Tags</a></li>
+
+        <li><a href="#handwritten">Hand Written Notes</a></li>
+
+    </ul>
+
+    <ul class="sidebar-extra">
+
+        <li><a href="quiz.html#html"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+        <li><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> My Notepad</a></li>
+
+        <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+    </ul>
+
+</aside>
+
+<!-- Main -->
+
+<div class="content">
+<button id="backBtn">
+    <i class="fa-solid fa-arrow-left"></i> Dashboard
+</button>
+<header>
+
+<h1>HTML Complete Notes </h1>
+
+<input
+type="text"
+id="searchTopic"
+placeholder="Search Topic...">
+
+<button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+</header>
+
+<!-- =================== -->
+
+<section id="intro">
+
+<h2>Introduction</h2>
+<h3>What is HTML?</h3>
+
+<p>
+
+HTML stands for Hyper Text Markup Language
+HTML is the standard markup language for creating Web pages
+HTML describes the structure of a Web page
+HTML consists of a series of elements
+HTML elements tell the browser how to display the content
+HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+
+</p>
+
+</section>
+
+<!-- =================== -->
+
+<section id="structure">
+
+<h2>Basic Structure</h2>
+
+
+<pre>
+
+<code>
+
+&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;Page&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+Hello World
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+</code>
+
+</pre>
+
+</section>
+
+
+
+<!-- =================== -->
+
+<section id="heading">
+
+<h2>Headings</h2>
+
+<p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+
+<pre>
+<code>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="paragraph">
+
+<h2>Paragraph</h2>
+
+<p>
+The HTML &lt;p&gt; element defines a paragraph.
+
+A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph
+
+
+</p>
+
+<pre>
+
+<code>
+
+&lt;p&gt;Hello Students&lt;/p&gt;
+
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="lists">
+
+<h2>Lists</h2>
+
+<p>
+.
+HTML lists allow web developers to group a set of related items in lists.
+<br>
+    
+ <h2>Unordered HTML List</h2>
+ 
+An unordered list starts with the < ul > tag. Each list item starts with the < li > tag.
+
+The list items will be marked with bullets (small black circles) by default:
+
+
+</code>
+</p>
+
+<pre>
+
+<code>
+
+&lt;ul&gt;
+
+&lt;li&gt;HTML&lt;/li&gt;
+
+&lt;/ul&gt;
+
+</code>
+
+</pre>
+<h2>Ordered HTML List</h2>
+<p>An ordered list starts with the < ol > tag. Each list item starts with the < li > tag.
+
+The list items will be marked with numbers by default:</p>
+
+<pre>
+
+<code>
+
+&lt;ol&gt;
+
+&lt;li&gt;HTML&lt;/li&gt;
+
+&lt;/ol&gt;
+
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="links">
+
+<h2>Links</h2>
+<p>Links are found in nearly all web pages. Links allow users to click their way from page to page.</p>
+
+<pre>
+
+<code>
+<h3>HTML Links - Syntax</h3>
+&lt;a href=""&gt;
+
+<h3>Button as a Link</h3>
+&lt;button onclick="document.location='default.asp'"&gt;HTML Tutorial&lt;/button&gt;
+
+
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="images">
+
+<h2>Images</h2>
+<p>Images can improve the design and the appearance of a web page.</p>
+<pre>
+<code>
+<h3 style="color: green;">&lt;img src = "image.jpg" alt = ""&gt;</h3>
+<h2 >Images Syntax</h2>
+The HTML &lt;img&gt;tag is used to embed an image in a web page.
+
+Images are not technically inserted into a web page; images are linked to web pages. The &lt;img&gt; tag creates a holding space for the referenced image.
+
+The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.
+
+The &lt;img&gt; tag has two required attributes:
+
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image
+
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="tables">
+
+<h2>Tables</h2>
+<p> HTML tables allow web developers to arrange data into rows and columns.</p>
+<pre>
+
+<code>
+<h2> Tbale Syntax</h2>
+&lt;table&gt; students&lt;/table&gt;
+<h2>Table Row</h2>
+<p>Each table row starts with a &lt;tr&gt;and ends with a &lt;/tr&gt; tag.</p>
+&lt;tr&gt; Name &lt;/tr&gt;
+<h2>Table Cell</h2>
+<P>Each table cell is defined by a &lt;td&gt;and a &lt;/td&gt;tag</P>
+&lt;td&gt;Data&lt;/td&gt;
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="forms">
+
+<h2>Forms</h2>
+<P>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</P>
+<pre>
+
+<code>
+    <h3 style="color: rgb(88, 210, 240);">The &lt;form&gt; Element</h3>
+    <p>The HTML &lt;form&gt; element is used to create an HTML form for user input:</p>
+&lt;form&gt;
+&lt;/form&gt;
+<h3 style="color: rgb(88, 210, 240);">The &lt;input&gt; Element</h3>
+<p>The HTML &lt;input&gt;element is the most used form element.
+
+An &lt;input&gt;element can be displayed in many ways, depending on the type attribute.</p>
+&lt;input type="text"&gt;      <P>Displays a single-line text input field</P>
+&lt;input type="checkbox"&gt;  <P>Displays a checkbox (for selecting zero or more of many choices)</P>
+&lt;input type="button"&gt;    <P>Displays a clickable button</P>
+&lt;input type="submit"&gt;    <P>Displays a submit button (for submitting the form)</P>
+
+</code>
+
+</pre>
+
+</section>
+
+<!-- =================== -->
+
+<section id="semantic">
+
+<h2>Semantic Tags</h2>
+<h2>What are Semantic Elements?</h2>
+A semantic element clearly describes its meaning to both the browser and the developer.
+<br>
+Examples of non-semantic elements: < div> and < span> - Tells nothing about its content.
+
+Examples of semantic elements: < img>, < table>, and < article> - Clearly defines its content.</p>
+<code>
+    <pre>
+        <table style="width:100%">
+  <tr>
+    <th>Tags</th>
+    <th>Descriptions</th>
+    
+  </tr>
+  <tr>
+    <td>&lt;article&gt;</td>  
+    <td>Defines independent, self-contained content</td>
+  </tr>     
+  <tr>
+    <td>&lt;aside&gt;</td> 
+  <td>Defines content aside from the page content</td>
+  </tr>                              
+  <tr>
+    <td>&lt;details&gt;</td> 
+  <td>Defines additional details that the user can view or hide</td>
+  </tr>                                      
+    
+  <tr>                               
+    <td>&lt;figure&gt;</td> 
+    <td>Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</td>
+    </tr>
+<tr>
+    <td>&lt;footer&gt;</td>
+    <td>Defines a footer for a document or section</td>
+</tr>
+
+<tr>
+      <td>&lt;header&gt;</td>
+      <td>Specifies a header for a document or section</td>
+    
+</tr>   
+
+<tr>
+      <td>&lt;figcaption&gt;</td>
+      <td>Defines a caption for a &lt;figure&gt; element</td>
+    
+</tr> 
+
+<tr> 
+    <td>&lt;main&gt;</td> 
+    <td>Specifies the main content of a document</td>
+</tr>  
+
+<tr>
+       <td>&lt;mark&gt;</td>
+       <td>Defines marked/highlighted text</td>
+</tr>  
+
+<tr>
+     <td>&lt;nav&gt;</td>  
+    <td>Defines navigation links</td>
+     
+</tr>   
+
+<tr>
+    <td>&lt;section&gt;</td>
+    <td>Defines a section in a document</td>
+    
+
+</tr>        
+
+<tr>
+    <td>&lt;summary&gt;</td> 
+    <td>Defines a visible heading for a &lt;details&gt; element</td>
+
+</tr>                   
+<tr>
+    <td>&lt;time&gt;</td> 
+    <td>Defines a date/time</td> 
+</tr>                                                                
+</table>
+    </pre>
+</code>
+
+
+</section>
+
+<section id="handwritten">
+    <h2> Hand Written Notes</h2>
+    <h1>Coming Soon </h1>
+</section>
+
+</p>
+
+</section>
+
+</div>
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notes.js"></script>
+
+</body>
+
+</html>

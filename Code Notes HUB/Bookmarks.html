@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notepad & Bookmarks | CodeNotes Hub</title>
+
+    <link rel="stylesheet" href="css/bookmark.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <h2>CodeNotes</h2>
+
+    <ul>
+
+        <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+        <li class="active"><a href="bookmarks.html"><i class="fa-solid fa-note-sticky"></i> Notepad & Bookmarks</a></li>
+
+        <li><a href="quiz.html"><i class="fa-solid fa-brain"></i> Practice Quiz</a></li>
+
+        <li><a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a></li>
+
+        <li id="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+
+    </ul>
+
+</aside>
+
+<!-- Main Content -->
+
+<div class="main-content">
+
+    <header>
+
+        <div>
+            <h1>Notepad & Bookmarks</h1>
+            <p>Your personal study workspace.</p>
+        </div>
+
+        <button id="darkMode" title="Toggle dark / light mode">🌙</button>
+
+    </header>
+
+    <!-- Bookmark Card -->
+
+    <div class="workspace-card" id="bookmarks">
+
+        <h2><i class="fa-solid fa-bookmark"></i> Saved Bookmarks</h2>
+
+        <div id="bookmarkList">
+
+            <p>No bookmarks yet.</p>
+
+        </div>
+
+    </div>
+
+    <!-- Personal Notepad -->
+
+    <div class="workspace-card" id="notepad">
+
+        <h2><i class="fa-solid fa-note-sticky"></i> My Notepad</h2>
+
+        <div class="notepad-toolbar">
+
+            <input type="text" id="noteSearch" placeholder="Search my notes...">
+
+            <button id="newNoteBtn">+ New Note</button>
+
+        </div>
+
+        <!-- New / Edit note form -->
+
+        <form id="noteForm" class="note-form" style="display:none;">
+
+            <input type="hidden" id="noteId">
+
+            <input type="text" id="noteTitle" placeholder="Note title" required>
+
+            <textarea id="noteContent" placeholder="Write your study notes here..." required></textarea>
+
+            <div class="note-form-actions">
+
+                <button type="submit" id="saveNoteBtn">Save Note</button>
+
+                <button type="button" id="cancelNoteBtn">Cancel</button>
+
+            </div>
+
+        </form>
+
+        <div id="notesList" class="notes-list"></div>
+
+    </div>
+
+    <!-- Todo list -->
+
+    <div class="workspace-card" id="todo">
+
+        <h2><i class="fa-solid fa-list-check"></i> Study To-Do List</h2>
+
+        <div class="todo-input">
+
+            <input
+            type="text"
+            id="todoInput"
+            placeholder="Enter a new study task...">
+
+            <button id="addTaskBtn">Add</button>
+
+        </div>
+
+        <ul id="todoList"></ul>
+
+    </div>
+
+</div>
+
+<script src="js/app-data.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/bookmarks.js"></script>
+
+</body>
+
+</html>

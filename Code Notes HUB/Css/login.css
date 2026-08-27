@@ -1,0 +1,438 @@
+/* ================================== LOGIN PAGE - CodeNotes Hub ================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#0F172A;
+
+    overflow:hidden;
+
+    color:white;
+
+}
+
+/* =========================== BACKGROUND CIRCLES =========================== */
+
+.bg-circle{
+
+    position:absolute;
+    border-radius:50%;
+    filter:blur(40px);
+    opacity:.5;
+
+}
+
+.one{
+
+    width:300px;
+    height:300px;
+
+    background:#3B82F6;
+
+    top:-100px;
+    left:-100px;
+
+}
+
+.two{
+
+    width:350px;
+    height:350px;
+
+    background:#8B5CF6;
+
+    bottom:-120px;
+    right:-100px;
+
+}
+
+/* =========================== CONTAINER =========================== */
+
+.container{
+
+    width:1100px;
+    max-width:85%;
+    height: 650px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:rgba(30,41,59,.65);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+
+}
+
+/* =========================== LEFT SIDE =========================== */
+
+.left{
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.left h1{
+
+    font-size:42px;
+    margin-bottom:20px;
+
+}
+
+.left p{
+
+    color:#CBD5E1;
+    line-height:1.8;
+    margin-bottom:35px;
+
+}
+
+.left img{
+
+    width:240px;
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/* ===========================  RIGHT SIDE =========================== */
+
+.right{
+
+    padding:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+form{
+
+    width:100%;
+
+}
+
+form h2{
+
+    text-align:center;
+    margin-bottom:8px;
+
+    font-size:34px;
+    font-weight:600;
+
+}
+
+form .subtitle{
+
+    text-align:center;
+    margin-bottom:32px;
+
+    color:#94A3B8;
+    font-size:14px;
+
+}
+
+/* =========================== INPUT BOX =========================== */
+
+.input-box{
+
+    position:relative;
+
+    margin-bottom:25px;
+
+}
+
+.input-box i{
+
+    position:absolute;
+
+    left:18px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#94A3B8;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:16px 50px;
+
+    border:2px solid transparent;
+    outline:none;
+
+    border-radius:50px;
+
+    background:#1E293B;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+/* ================= Eye Button ================= */
+
+#togglePassword {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-30%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    outline: none;
+    border-radius: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    color: #94A3B8;
+    font-size: 15px;
+
+    transition: .2s ease;
+}
+
+/* Remove focus square */
+#togglePassword:focus,
+#togglePassword:focus-visible,
+#togglePassword:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+#togglePassword:hover {
+    color: #030303;
+}
+
+
+/* =========================== REMEMBER =========================== */
+
+.remember{
+
+    margin-bottom:25px;
+
+    color:#CBD5E1;
+
+    font-size:15px;
+
+}
+
+.remember input{
+
+    margin-right:8px;
+
+    accent-color:#3B82F6;
+
+    width:15px;
+    height:15px;
+
+    cursor:pointer;
+
+    vertical-align:middle;
+
+}
+
+.remember label{
+
+    display:inline-flex;
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+/* ===========================  BUTTON =========================== */
+
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+
+    box-shadow:0 8px 20px rgba(59,130,246,.25);
+
+    transition:.3s ease;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 14px 28px rgba(59,130,246,.4);
+
+}
+
+button:active{
+
+    transform:translateY(-1px) scale(.98);
+
+}
+
+/* ===========================  SIGNUP =========================== */
+
+.signup{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#CBD5E1;
+
+}
+
+.signup a{
+
+    color:#3B82F6;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.signup a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================  FLOAT ANIMATION =========================== */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================  RESPONSIVE =========================== */
+
+@media(max-width:900px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.left{
+
+padding:40px 30px;
+
+}
+
+.left img{
+
+width:200px;
+
+}
+
+.right{
+
+padding:40px 30px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.left h1{
+
+font-size:30px;
+
+}
+
+form h2{
+
+font-size:28px;
+
+}
+
+.input-box input{
+
+padding:14px 45px;
+
+font-size:15px;
+
+}
+
+button{
+
+padding:14px;
+
+}
+
+}

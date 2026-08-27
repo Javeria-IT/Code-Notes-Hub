@@ -1,0 +1,360 @@
+/* ========================================== CodeNotes Hub - Profile CSS ========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0F172A;
+    color:#F8FAFC;
+    display:flex;
+    min-height:100vh;
+}
+
+:root{
+    --bg:#0F172A;
+    --sidebar:#111827;
+    --card:#1E293B;
+    --primary:#3B82F6;
+    --secondary:#8B5CF6;
+    --text:#F8FAFC;
+    --grey:#94A3B8;
+    --shadow:0 15px 35px rgba(0,0,0,.30);
+}
+
+.sidebar{
+    width:260px;
+    min-height:100vh;
+    background:var(--sidebar);
+    padding:25px;
+    position:fixed;
+    left:0;
+    top:0;
+    border-right:1px solid rgba(255,255,255,.05);
+}
+
+.sidebar h2{
+    color:var(--primary);
+    margin-bottom:40px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 18px;
+    margin-bottom:12px;
+    border-radius:12px;
+    cursor:pointer;
+    color:var(--grey);
+    transition:.3s;
+}
+
+.sidebar li a{
+    color:inherit;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    width:100%;
+}
+
+.sidebar li:hover{
+    background:rgba(59,130,246,.15);
+    color:white;
+}
+
+.sidebar li.active{
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+    color:white;
+}
+
+.main{
+    margin-left:260px;
+    padding:40px;
+    width:100%;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:35px;
+}
+
+header h1{
+    font-size:34px;
+    margin-bottom:6px;
+}
+
+header p{
+    color:var(--grey);
+}
+
+#darkMode{
+    background:var(--card);
+    border:none;
+    color:white;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* ========== GRID ========== */
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:25px;
+}
+
+.profile-card,
+.stats-card,
+.tech-card{
+    background:var(--card);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.tech-card{
+    grid-column:1 / -1;
+}
+
+/* ========== PROFILE CARD ========== */
+
+.profile-card{
+    text-align:center;
+}
+
+.avatar{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+    margin:0 auto 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    font-weight:700;
+}
+
+.profile-card h2{
+    margin-bottom:6px;
+}
+
+.profile-card p{
+    color:var(--grey);
+    margin-bottom:20px;
+    word-break:break-all;
+}
+
+#editProfileBtn{
+    background:rgba(59,130,246,.15);
+    color:var(--primary);
+    border:none;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+#editProfileForm{
+    margin-top:20px;
+    flex-direction:column;
+    gap:12px;
+}
+
+#editProfileForm input{
+    width:100%;
+    padding:12px 16px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.05);
+    color:var(--text);
+    outline:none;
+    margin-bottom:12px;
+}
+
+#editProfileForm button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* ========== STATS ========== */
+
+.stats-card h2, .tech-card h2{
+    margin-bottom:22px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,.04);
+    border-radius:14px;
+    padding:18px;
+    text-align:center;
+}
+
+.stat-box i{
+    font-size:22px;
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.stat-box h3{
+    font-size:22px;
+    margin-bottom:4px;
+}
+
+.stat-box p{
+    font-size:12px;
+    color:var(--grey);
+}
+
+/* ========== TECH PROGRESS ROWS ========== */
+
+.progress-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.progress-row:last-child{
+    border-bottom:none;
+}
+
+.progress-row i{
+    width:24px;
+    text-align:center;
+}
+
+.progress-row .label{
+    width:130px;
+    font-weight:600;
+}
+
+.progress-row .bar-track{
+    flex:1;
+    height:10px;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+    overflow:hidden;
+}
+
+.progress-row .bar-fill{
+    height:100%;
+    border-radius:10px;
+    background:linear-gradient(45deg,#3B82F6,#8B5CF6);
+}
+
+.progress-row .pct{
+    width:45px;
+    text-align:right;
+    color:var(--grey);
+    font-size:14px;
+}
+
+/* ========== BOOKMARKS ========== */
+
+.bookmark-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(139,92,246,.15);
+    color:#C4B5FD;
+    padding:10px 16px;
+    border-radius:30px;
+    margin:0 10px 10px 0;
+    font-size:14px;
+}
+
+.empty-msg{
+    color:var(--grey);
+}
+
+/* ========== LIGHT MODE ========== */
+
+.light-mode{
+    background:#F8FAFC;
+    color:#111827;
+}
+
+.light-mode .sidebar,
+.light-mode .profile-card,
+.light-mode .stats-card,
+.light-mode .tech-card{
+    background:white;
+    color:#111827;
+}
+
+.light-mode .stat-box{
+    background:#F1F5F9;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width:900px){
+
+    .profile-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        width:80px;
+        padding:20px 10px;
+    }
+
+    .sidebar h2, .sidebar li a{
+        font-size:0;
+    }
+
+    .sidebar li i{
+        font-size:20px;
+        margin:0 auto;
+    }
+
+    .main{
+        margin-left:80px;
+        padding:25px;
+    }
+}
+
+@media (max-width:600px){
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:15px;
+    }
+}
