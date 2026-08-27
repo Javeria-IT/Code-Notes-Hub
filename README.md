@@ -174,7 +174,6 @@ Add screenshots of your project here:
 ![Login Page](Code Notes HUB/images/Login.png)
 
 ![Dashboard](Code Notes HUB/images/Dashboard.png)
-
 ![Contact Page](Code Notes HUB/images/contact.png)
 ```
 
